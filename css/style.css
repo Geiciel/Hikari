@@ -42,7 +42,7 @@ header > img {
     border-radius: 10px;
     color: #fff;
     position: relative;
-    top: 230px;
+    top: 25%;
     left: 10%;
     transition: 2s;
 }
