@@ -30,7 +30,7 @@ header > img {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: calc(100dvh - 130px);
+    height: calc(100vh - 130px);
     box-shadow: inset 0px -10px 30px #000000be;
     transition: 2s;
 }
