@@ -1,0 +1,84 @@
+header {
+    height: 60px;
+}
+
+header > img {
+    width: 60px;
+}
+
+.intro {
+    height: calc(100dvh - 200px);
+}
+
+.text {
+    max-width: 360px;
+    top: 30%;
+    left: 1%;
+}
+
+.text > .intro-p {
+    font-size: 1.5rem;
+}
+.sobre-txt {
+    max-width: 650px;
+    padding: 1%;
+}
+
+.sobre-foto {
+    margin: auto;
+}
+
+.historia {
+    margin-left: 1%;
+}
+
+.int-produtos {
+    column-gap: 5%;
+}
+
+.sobre-foto {
+    width: 310px;
+    max-height: 300px;
+    margin: auto 0px;
+}
+
+.sobre-foto > img {
+    display: block;
+    max-width: 290px;
+}
+
+/* pagina Orçamentos */
+
+.login {
+    background: none;
+}
+
+.foto-login {
+    display: none;
+}
+
+.form-ext {
+    width: 100vw;
+    height: 100dvh;
+    background-color: #d9d9d9;
+    box-shadow: 10px 10px 40px #00000015;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.h1-login {
+    color: #8BC349;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+label {
+    color: #012904;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+input {
+    box-shadow: 5px 5px 10px #00000009;
+}

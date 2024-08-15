@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/970px.css" media="screen and (min-width: 601px) and (max-width: 945px)">
+    <link rel="stylesheet" href="css/600px.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="css/480px.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" href="css/390px.css" media="screen and (max-width: 389px)">
+    
+    <title>Hikari</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="lodo da empresa Hikari">
+    </header>
+    <section>
+        <div class="intro">
+            <div class="text">
+                <p class="intro-p">Criando ambientes pensados na sua <span>Personalidade, Praticidade e Inovação</span></p>
+            </div>
+        </div><!--intro-->
+        <div class="sobre">
+            <div class="sobre-int">
+                <div class="sobre-txt">
+                    <h1>Sobre nós</h1>
+                    <p>Nossa Missão se resume em criar ambientes domésticos que promovam a qualidade de vida e autenticidade pessoal. Além disso nossa Visão é se tornar a maior empresa de construção e incorporação Steel Frame no Brasil, inovando o mercado e transformando a tecnologia e mercado de construção nacional. Por fim, os Valores da Hikari são: Autenticidade, Honestidade, Criatividade, Eficiência e Agilidade.</p>
+                </div>
+                <div class="sobre-foto">
+                    <img src="img/section-redimencionada.jpg" alt="">
+                </div>
+            </div><!--sobre-int-->
+        </div><!--sobre-->
+        <div class="historia content hidden-text" id="animated-text">
+            <p>A Hikari construtora e incorporadora é uma empresa que surgiu em 2024 com o objetivo de entregar a montagem de um ambiente doméstico-artístico, que engloba as necessidades pessoais de cada pessoa, inspirado em seus gostos e vivências, além de uma qualidade de vida integrada com uma tecnologia inovadora no país, de forma mais rápida e eficiente do que qualquer outra construção convencional, inovando assim o mercado brasileiro.</p>
+        </div><!--historia-->
+        <div class="produtos">
+            <div class="int-produtos">
+                <div class="produto" onclick="toggleActive(this)">
+                    <div class="produto-int">
+                        <img src="img/produto-casa-pre-pronta-w400px.jpg" alt="">
+                        <h2>Casa Pré Pronta</h2>
+                        <p>Construção da casa em Steel Frame de acordo com projeto arquitetônico, engenheiro e design de interiores já pré preparados em modelos específicos, e mobiliação.</p>
+                    </div>
+                    <a href="html/agenda.html">
+                        <button>
+                            <p class="russo-one-regular">Orçamentos</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="produto" onclick="toggleActive(this)">
+                    <div class="produto-int">
+                        <img src="img/produto-casa-personalizada-w400px.jpg" alt="">
+                        <h2>Lar personalizado</h2>
+                        <p>Elaboração e Criação de projeto arquitetônico, engenheiro e design de interiores, construção da casa em Steel Frame e mobiliação.</p>
+                    </div>
+                    <a href="html/agenda.html">
+                    <button>
+                        <p class="russo-one-regular">Orçamentos</p>
+                    </button>
+                </a>
+                </div>
+                <div class="produto" onclick="toggleActive(this)">
+                    <div class="produto-int">
+                        <img src="img/produto-casa-inteligente-w400px.jpg" alt="">
+                        <h2>Lar Personalizado + Sistema Inteligente</h2>
+                        <p>Elaboração e Criação de projeto arquitetônico, engenheiro e design de interiores, construção da casa em Steel Frame, mobiliação e aplicação do sistema de casas inteligentes.</p>
+                    </div>
+                    <a href="html/agenda.html">
+                        <button>
+                            <p class="russo-one-regular">Orçamentos</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-div">
+                <div class="div-foot txt-foot">
+                    <h2 class="russo-one-regular">Entre em contato:</h2><br>
+                        <p>(16) 4002-8922</p><br>
+                        <p class="email-p">hikaristeelframe@gmail.com.br</p>
+                </div>
+                <div class="div-foot txt-foot">
+                    <h2 class="russo-one-regular"> Fundadores:</h2>
+                    <ul>
+                        <li>Eduarda Soares</li>
+                        <li>Isabelle Esteves</li>
+                        <li>Mikaelly Camilly</li>
+                        <li>Rayssa Eduarda</li>
+                    </ul>
+                </div>
+            <div class="div-foot foto-foot">
+                <img src="img/logo.jpg" width="200px">
+            </div>
+        </div>
+        <div class="patroc">
+            <p>Site patrocinado por <a href="https://github.com/Geiciel" target="_blank" class="patro">Geiciel Marques</a></p>
+        </div>
+    </footer>
+    <script>
+        window.alert ('Olá, esse site é dedicado a um trabalho de TCC (Trabalho de conclusão de curso), ou seja, essa construtora é ficticia')
+
+        function toggleActive(element) {
+            element.classList.toggle('active');
+        }
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function checkVisibility() {
+            const text = document.getElementById('animated-text');
+            if (isInViewport(text)) {
+                text.classList.add('visible-text');
+            }
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+</html>

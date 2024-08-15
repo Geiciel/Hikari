@@ -1,0 +1,38 @@
+header {
+    height: 60px;
+}
+
+header > img {
+    width: 60px;
+}
+
+.intro {
+    transition: 2s;
+    height: calc(100dvh - 400px);
+}
+
+.text {
+    max-width: 360px;
+    top: 120px;
+    left: 1%;
+}
+
+.text > .intro-p {
+    font-size: 2.4rem;
+}
+.sobre-txt {
+    max-width: 650px;
+    padding: 1%;
+}
+
+.sobre-foto {
+    margin: auto;
+}
+
+.historia {
+    margin-left: 1%;
+}
+
+.int-produtos {
+    column-gap: 5%;
+}

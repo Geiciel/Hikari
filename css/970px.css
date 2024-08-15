@@ -1,0 +1,25 @@
+.text {
+    max-width: 500px;
+    left: 8%;
+}
+
+.text > .intro-p {
+    font-size: 2.7rem;
+}
+
+.sobre-txt {
+    max-width: 650px;
+    padding: 8%;
+}
+
+.sobre-foto {
+    margin: auto;
+}
+
+.historia {
+    margin-left: 8%;
+}
+
+.int-produtos {
+    column-gap: 5%;
+}

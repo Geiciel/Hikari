@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/720px.css" media="screen and (max-width: 720px)">
+    <link rel="stylesheet" href="../css/390px.css" media="screen and (max-width: 389px)">
+
+    <title>Hikari - Orçamentos</title>
+</head>
+<body>
+    <section class="login">
+        <div class="section-login">
+            <div class="foto-login">
+                <div class="degrade"></div>
+            </div>
+            <div class="form-ext">
+                <div class="form-meio">
+                    <h1 class="h1-login">Agende um <br> Hoário</h1>
+                    <div class="form-int">
+                        <form action="">
+                            <div class="input">
+                                <label for="id-nome">Nome:</label>
+                                <input type="text" name="nome" id="id-nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="input">
+                                <label for="id-email">E-mail:</label>
+                                <input type="email" name="email" id="id-email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="input">
+                                <label for="id-numer">Número:</label>
+                                <input type="tel" name="telef" id="id-numer" placeholder="Seu número" required>
+                            </div>
+                            <div class="data-hora">
+                                <div class="data">
+                                    <label for="id-data">Data:</label>
+                                    <input type="date" name="data" id="id-data" required>
+                                </div>
+                                <div class="hora">
+                                    <label for="id-hora">Horas:</label>
+                                    <input type="time" name="hora" id="id-hora" required>
+                                </div>
+                            </div><!--input-->
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!--form-ext-->
+        </div>
+    </section>
+    <script>
+        window.onload = function() {
+            // Obter os campos de data e hora
+            const dateInput = document.getElementById('id-data');
+            const timeInput = document.getElementById('id-hora');
+            
+            // Função para formatar o valor da data
+            function formatDate(date) {
+                const year = date.getFullYear();
+                const month = ('0' + (date.getMonth() + 1)).slice(-2);
+                const day = ('0' + date.getDate()).slice(-2);
+                return `${year}-${month}-${day}`;
+            }
+
+            // Função para formatar o valor da hora
+            function formatTime(date) {
+                const hours = ('0' + date.getHours()).slice(-2);
+                const minutes = ('0' + date.getMinutes()).slice(-2);
+                return `${hours}:${minutes}`;
+            }
+            
+            // Configurar os atributos mínimos para data e hora
+            const now = new Date();
+            // Adicionar dois dias à data atual
+            const minDate = new Date(now);
+            minDate.setDate(minDate.getDate() + 1);
+
+            dateInput.min = formatDate(minDate);
+            timeInput.min = formatTime(now);
+
+            // Atualizar o campo de hora quando a data mudar
+            dateInput.addEventListener('change', function() {
+                const selectedDate = new Date(dateInput.value);
+                const today = new Date(formatDate(minDate));
+
+                // Se a data selecionada é hoje, ajustar o campo de hora
+                if (selectedDate.getTime() === today.getTime()) {
+                    timeInput.min = formatTime(now);
+                } else {
+                    timeInput.min = '00:00'; // Reseta a hora mínima para o dia selecionado
+                }
+            });
+        }
+    </script>
+</body>
+</html>
