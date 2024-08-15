@@ -8,12 +8,12 @@ header > img {
 
 .intro {
     transition: 2s;
-    height: calc(100dvh - 400px);
+    height: calc(100dvh - 100px);
 }
 
 .text {
     max-width: 360px;
-    top: 120px;
+    top: 25%;
     left: 1%;
 }
 
