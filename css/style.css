@@ -343,6 +343,8 @@ label {
     padding: 0px 5px;
     font-size: 1.1rem;
     outline: none;
+    width: 97%;
+    text-align: center;
 }
 
 .hora {
