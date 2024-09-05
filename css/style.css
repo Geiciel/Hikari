@@ -262,6 +262,21 @@ footer {
     color: #fff;
 }
 
+li {
+    list-style-type: none;
+    margin-bottom: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8BC349;
+}
+
 /* Pagina de Orçamentos */
 
 .login {
@@ -315,7 +330,7 @@ label {
 .input {
     text-align: start;
     height: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 
 }
 
