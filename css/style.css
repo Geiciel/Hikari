@@ -19,7 +19,7 @@ header {
     height: 120px;
 }
 
-header > img {
+header > a > img {
     width: 130px;
     margin-left: 5vh;
     margin-top: 5px;
